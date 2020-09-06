@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "module": "commonjs", // モジュールのインポート方法の指定。node.jsなのかブラウザなのかで変わる。
+    "lib": ["esnext"], // targetだけでは不十分な場合（target以上のECMAScriptの機能を使いたいなど）指定。ECMAScriptではできるだけ最新にしたい
+    "target": "es6", // 実行環境のECMAScript指定。互換性を考慮してできるだけ低くしたい。
+    "sourceMap": true,
+    "outDir": "./build",
+    "removeComments": true, // コメント行を取り除く
+    "experimentalDecorators": true,
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "downlevelIteration": true, //target:es5でfor...ofをMapで使用した際必要だった
+    "declaration": true
+  },
+  "exclude": ["node_modules"],
+  "include": ["src/**/*.ts"]
+}
